@@ -26,6 +26,9 @@ Plug 'rust-lang/rust.vim'
 Plug 'fugue/ludwig-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'ervandew/supertab'
+Plug 'yggdroot/indentline'
+Plug 'raimondi/delimitmate'
+Plug 'roxma/vim-paste-easy'
 
 call plug#end()
 call glaive#Install()
