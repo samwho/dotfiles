@@ -7,5 +7,12 @@
     -
       command: "git submodule update --init --recursive"
       description: "Installing submodules"
+    - "mkdir -p ~/.bashrc.d"
+
+- link:
+    ~/.bashrc: .bashrc
+    ~/.bashrc.d/aliases.bash: .bashrc.d/aliases.bash
+    ~/.bashrc.d/base.bash: .bashrc.d/base.bash
+    ~/.bashrc.d/history.bash: .bashrc.d/history.bash
 
 - clean: ['~']
