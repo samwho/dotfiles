@@ -8,6 +8,7 @@
 - link:
     ~/.vimrc: .vimrc
     ~/.vimrc.local: .vimrc.local
+    ~/.Xdefaults: .Xdefaults
 
 - shell:
     - mkdir -p ~/.vim/bundle ~/.vim/backup ~/.vim/tmp
