@@ -1,37 +1,33 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'scrooloose/syntastic'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'oscarh/vimerl'
+Plug 'tpope/vim-markdown'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-repeat'
+Plug 'altercation/vim-colors-solarized'
+Plug 'rodjek/vim-puppet'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+Plug 'fatih/vim-go'
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
+Plug 'google/vim-ft-bzl'
+Plug 'rust-lang/rust.vim'
+Plug 'fugue/ludwig-vim'
+Plug 'itchyny/lightline.vim'
+Plug 'ervandew/supertab'
 
-Plugin 'scrooloose/syntastic'
-Plugin 'godlygeek/tabular'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-endwise'
-Plugin 'oscarh/vimerl'
-Plugin 'tpope/vim-markdown'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-repeat'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'rodjek/vim-puppet'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-session'
-Plugin 'fatih/vim-go'
-Plugin 'google/vim-maktaba'
-Plugin 'google/vim-codefmt'
-Plugin 'google/vim-glaive'
-Plugin 'google/vim-ft-bzl'
-Plugin 'rust-lang/rust.vim'
-Plugin 'fugue/ludwig-vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'ervandew/supertab'
-
-call vundle#end()
+call plug#end()
 call glaive#Install()
 
 let g:go_fmt_command = "goimports"

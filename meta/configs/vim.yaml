@@ -1,13 +1,13 @@
 - shell:
-    - mkdir -p ~/.vim/bundle ~/.vim/backup ~/.vim/tmp
+    - mkdir -p ~/.vim/backup ~/.vim/tmp ~/.vim/autoload ~/.vim/plug
 
 - link:
     ~/.vimrc: .vimrc
     ~/.vimrc.local: .vimrc.local
-    ~/.vim/bundle/Vundle.vim: Vundle.vim
+    ~/.vim/autoload/plug.vim: vim-plug/plug.vim
 
 - shell:
-    - command: vim +PluginInstall +qall
+    - command: vim +PlugInstall +qall
       description: "Installing vim plugins..."
       stdin: true
       stdout: true
