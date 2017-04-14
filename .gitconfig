@@ -1,0 +1,7 @@
+[user]
+	email = samwho@lbak.co.uk
+	name = Sam Rose
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/sam/.gitignore_global

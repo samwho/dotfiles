@@ -1,2 +1,3 @@
 - link:
     ~/.bashrc.d/ruby.bash: .bashrc.d/ruby.bash
+    ~/.gemrc: .gemrc

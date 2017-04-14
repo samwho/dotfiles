@@ -11,8 +11,11 @@
 
 - link:
     ~/.bashrc: .bashrc
+    ~/.bash_profile: .bash_profile
     ~/.bashrc.d/aliases.bash: .bashrc.d/aliases.bash
     ~/.bashrc.d/base.bash: .bashrc.d/base.bash
+    ~/.bashrc.d/editor.bash: .bashrc.d/editor.bash
     ~/.bashrc.d/history.bash: .bashrc.d/history.bash
+    ~/.bashrc.d/ps1.bash: .bashrc.d/ps1.bash
 
 - clean: ['~']
