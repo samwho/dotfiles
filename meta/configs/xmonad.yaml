@@ -1,0 +1,5 @@
+- link:
+    ~/.xmonad: .xmonad
+
+- shell:
+    - xmonad --recompile
