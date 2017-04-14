@@ -29,6 +29,7 @@ Plug 'ervandew/supertab'
 Plug 'yggdroot/indentline'
 Plug 'raimondi/delimitmate'
 Plug 'roxma/vim-paste-easy'
+Plug 'andrewradev/splitjoin.vim'
 
 call plug#end()
 call glaive#Install()
@@ -48,9 +49,9 @@ set go-=m                 " Hide menu (gvim).
 set go-=T                 " Hide toolbar (gvim).
 set nu                    " Line numbers.
 set hidden                " Hide buffers when switching rather than closing them.
-set tabstop=4             " Four spaces to a tab.
-set softtabstop=4
-set shiftwidth=4          " Number of spaces to use for autoindenting.
+set tabstop=2             " Two spaces to a tab.
+set softtabstop=2
+set shiftwidth=2          " Number of spaces to use for autoindenting.
 set expandtab
 set autoindent            " Automatically indent.
 set copyindent            " Copy the previous line's indenting.
