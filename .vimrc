@@ -4,6 +4,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
 Plugin 'scrooloose/syntastic'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-commentary'
@@ -16,7 +19,6 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'rodjek/vim-puppet'
-Plugin 'vim-scripts/cscope.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'fatih/vim-go'
@@ -27,8 +29,7 @@ Plugin 'google/vim-ft-bzl'
 Plugin 'rust-lang/rust.vim'
 Plugin 'fugue/ludwig-vim'
 Plugin 'itchyny/lightline.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'chriskempson/base16-vim'
+Plugin 'ervandew/supertab'
 
 call vundle#end()
 call glaive#Install()
