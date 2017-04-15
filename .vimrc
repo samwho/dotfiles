@@ -38,6 +38,7 @@ let g:go_fmt_command = "goimports"
 
 syntax enable
 
+set background=dark
 colorscheme solarized
 
 " Load plugins.
