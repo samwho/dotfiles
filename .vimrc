@@ -27,7 +27,6 @@ Plug 'fugue/ludwig-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'ervandew/supertab'
 Plug 'yggdroot/indentline'
-Plug 'raimondi/delimitmate'
 Plug 'roxma/vim-paste-easy'
 Plug 'andrewradev/splitjoin.vim'
 
@@ -55,6 +54,8 @@ set softtabstop=2
 set shiftwidth=2          " Number of spaces to use for autoindenting.
 set expandtab
 set autoindent            " Automatically indent.
+set smartindent
+set cindent
 set copyindent            " Copy the previous line's indenting.
 set showmatch             " Show matching parenthesis.
 set hlsearch              " Highlight search terms.
