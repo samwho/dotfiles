@@ -25,3 +25,4 @@
     ~/.bashrc.d/history.bash: .bashrc.d/history.bash
     ~/.bashrc.d/ps1.bash: .bashrc.d/ps1.bash
     ~/.ssh/config: .ssh/config
+    ~/.bin: .bin
