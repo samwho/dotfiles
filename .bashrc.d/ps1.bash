@@ -17,4 +17,4 @@ GREEN=$(tput setaf 64)
 BOLD=$(tput bold)
 RESET=$(tput sgr0)
 
-PS1="\[${BOLD}${BLUE}\]\u${RESET}@\[${BOLD}${YELLOW}\h\]\[${BOLD}${BASE0}\]:\[${BOLD}${BASE1}\]\w\[${RESET}\] \$ "
+PS1="\[${BOLD}\]\[${BLUE}\]\u\[${RESET}\]@\[${BOLD}\]\[${YELLOW}\]\h\[${BOLD}\]\[${BASE0}\]:\[${BOLD}\]\[${BASE1}\]\w\[${RESET}\] \$ "

@@ -3,7 +3,9 @@
 
 - link:
     ~/.tmux.conf: .tmux.conf
-    ~/.tmux.default.conf: .tmux.default.conf
     ~/.tmux/plugins/tpm: tpm
-    ~/.bashrc.d/aliases.d/tmux.bash: .bashrc.d/aliases.d/tmux.bash
 
+- shell:
+    - ~/.tmux/plugins/tpm/bin/clean_plugins
+    - ~/.tmux/plugins/tpm/bin/install_plugins
+    - ~/.tmux/plugins/tpm/bin/update_plugins all

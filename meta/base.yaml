@@ -3,6 +3,10 @@
       create: true
       relink: true
 
+- clean: ['~']
+- clean: ['~/bashrc.d']
+- clean: ['~/bashrc.d/aliases.d']
+
 - shell:
     -
       command: "git submodule update --init --recursive"
@@ -19,5 +23,3 @@
     ~/.bashrc.d/editor.bash: .bashrc.d/editor.bash
     ~/.bashrc.d/history.bash: .bashrc.d/history.bash
     ~/.bashrc.d/ps1.bash: .bashrc.d/ps1.bash
-
-- clean: ['~']
