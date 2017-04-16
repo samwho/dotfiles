@@ -13,6 +13,7 @@
       description: "Installing submodules"
     - mkdir -p ~/.bashrc.d
     - mkdir -p ~/.bashrc.d/aliases.d
+    - mkdir -p ~/.ssh
 
 - link:
     ~/.bashrc: .bashrc
@@ -23,3 +24,4 @@
     ~/.bashrc.d/editor.bash: .bashrc.d/editor.bash
     ~/.bashrc.d/history.bash: .bashrc.d/history.bash
     ~/.bashrc.d/ps1.bash: .bashrc.d/ps1.bash
+    ~/.ssh/config: .ssh/config
