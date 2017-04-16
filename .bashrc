@@ -1,5 +1,2 @@
 # Allow for more modular bash configuration.
-for file in ~/.bashrc.d/*
-do
-    source $file
-done
+for file in ~/.bashrc.d/*.bash; do source $file; done

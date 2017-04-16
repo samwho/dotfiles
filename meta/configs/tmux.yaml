@@ -1,2 +1,9 @@
+- shell:
+    - mkdir -p ~/.tmux/plugins
+
 - link:
     ~/.tmux.conf: .tmux.conf
+    ~/.tmux.default.conf: .tmux.default.conf
+    ~/.tmux/plugins/tpm: tpm
+    ~/.bashrc.d/aliases.d/tmux.bash: .bashrc.d/aliases.d/tmux.bash
+

@@ -29,6 +29,7 @@ Plug 'ervandew/supertab'
 Plug 'yggdroot/indentline'
 Plug 'roxma/vim-paste-easy'
 Plug 'andrewradev/splitjoin.vim'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 call plug#end()
 call glaive#Install()
