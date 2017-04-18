@@ -28,10 +28,10 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           false
-URxvt*font: xft:Hack:pixelsize=22:style=medium
+URxvt*font: xft:Roboto Mono:pixelsize=16:style=medium
 
 ! Fix font space
-URxvt.letterSpace: -2
+URxvt.letterSpace: -1
 
 ! Scrollbar
 URxvt.scrollStyle:          rxvt
