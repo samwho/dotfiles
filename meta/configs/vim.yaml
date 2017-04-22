@@ -3,7 +3,6 @@
 
 - link:
     ~/.vimrc: .vimrc
-    ~/.vimrc.local: .vimrc.local
     ~/.vim/autoload/plug.vim: vim-plug/plug.vim
 
 - shell:
