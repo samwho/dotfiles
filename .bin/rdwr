@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+import humanize
+import psutil
+import time
+
+interval = 2
+start = psutil.disk_io_counters()
+time.sleep(interval)
+end = psutil.disk_io_counters()
+
+read = humanize.naturalsize(
+    (end.read_bytes - start.read_bytes) / interval, gnu=True)
+write = humanize.naturalsize(
+    (end.write_bytes - start.write_bytes) / interval, gnu=True)
+print("{:6}/{:>6}".format(read, write))

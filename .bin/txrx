@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+import humanize
+import psutil
+import time
+
+interval = 2
+start = psutil.net_io_counters()
+time.sleep(interval)
+end = psutil.net_io_counters()
+
+up = humanize.naturalsize(
+    (end.bytes_sent - start.bytes_sent) / interval, gnu=True)
+down = humanize.naturalsize(
+    (end.bytes_recv - start.bytes_recv) / interval, gnu=True)
+print("{:6}/{:>6}".format(up, down))
