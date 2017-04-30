@@ -1,5 +1,6 @@
 - link:
     ~/.xmonad: .xmonad
+    ~/.xinitrc: .xinitrc
 
 - shell:
     - xmonad --recompile
