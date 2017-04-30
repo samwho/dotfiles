@@ -1,5 +1,6 @@
 - shell:
     - mkdir -p ~/.tmux/plugins
+    - python -m ensurepip --user
     - python -m pip install psutil humanize
 
 - link:
