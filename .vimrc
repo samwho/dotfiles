@@ -30,6 +30,8 @@ Plug 'yggdroot/indentline'
 Plug 'roxma/vim-paste-easy'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'Vimjas/vim-python-pep8-indent'
 
 call plug#end()
 call glaive#Install()
