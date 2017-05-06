@@ -32,11 +32,14 @@ Plug 'andrewradev/splitjoin.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'artur-shaik/vim-javacomplete2'
 
 call plug#end()
 call glaive#Install()
 
 let g:go_fmt_command = "goimports"
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
 syntax enable
 
@@ -83,6 +86,7 @@ set laststatus=2
 set termencoding=utf-8
 set encoding=utf-8
 set backspace=indent,eol,start
+set completeopt=menu,menuone
 
 " Session management
 let g:session_default_name = getcwd()
