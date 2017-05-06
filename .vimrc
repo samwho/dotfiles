@@ -8,7 +8,6 @@ Plug 'godlygeek/tabular'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'oscarh/vimerl'
-Plug 'tpope/vim-markdown'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -33,9 +32,14 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'artur-shaik/vim-javacomplete2'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-sensible'
 
 call plug#end()
 call glaive#Install()
+
+Glaive codefmt plugin[mappings]
+Glaive codefmt google_java_executable="javafmt"
 
 let g:go_fmt_command = "goimports"
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
@@ -55,27 +59,19 @@ set go-=m                 " Hide menu (gvim).
 set go-=T                 " Hide toolbar (gvim).
 set nu                    " Line numbers.
 set hidden                " Hide buffers when switching rather than closing them.
-set tabstop=2             " Two spaces to a tab.
-set softtabstop=2
-set shiftwidth=2          " Number of spaces to use for autoindenting.
 set expandtab
 set autoindent            " Automatically indent.
 set smartindent
-set cindent
 set copyindent            " Copy the previous line's indenting.
 set showmatch             " Show matching parenthesis.
 set hlsearch              " Highlight search terms.
-set incsearch             " Show search matches incrementally.
 set history=1000          " Commands and search history.
 set undolevels=1000       " Lots of undo levels.
-set autowrite             " Write changed buffers before :make.
 set wildmenu              " Wildmenu rocks.
 set shiftround            " always round indents to multiple of shiftwidth.
 set backup                " Get rid of the .swp files from my working dir.
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
-set scrolloff=5           " Keep at least 5 lines above and below.
-set sidescrolloff=5       " Keep at least 5 chars left and right.
 set textwidth=80          " The maximum number of characters a line should be.
 set fo+=t                 " Automatically wrap long lines
 set noswapfile            " Don't bother with swap files.
@@ -85,7 +81,6 @@ set pastetoggle=,p        " Toggle paste mode, which allows you to paste as-is
 set laststatus=2
 set termencoding=utf-8
 set encoding=utf-8
-set backspace=indent,eol,start
 set completeopt=menu,menuone
 
 " Session management
