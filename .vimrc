@@ -63,6 +63,7 @@ set expandtab
 set autoindent            " Automatically indent.
 set smartindent
 set copyindent            " Copy the previous line's indenting.
+set tabstop=4             " Show tabs as 4 spaces
 set showmatch             " Show matching parenthesis.
 set hlsearch              " Highlight search terms.
 set history=1000          " Commands and search history.
