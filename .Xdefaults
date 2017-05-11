@@ -8,7 +8,8 @@ Xft.rgba:                   rgb
 Xft.hinting:                true
 Xft.hintstyle:              hintslight
 
-xterm*SaveLines: 5000
+xterm*SaveLines: 10000
+URxvt*saveLines: 10000
 
 !-------------------------------------------------------------------------------
 ! URxvt settings
@@ -22,7 +23,6 @@ URxvt.geometry:             90x30
 URxvt.transparent:          false
 URxvt.fading:               0
 URxvt.loginShell:           true
-URxvt.saveLines:            50
 URxvt.internalBorder:       3
 URxvt.lineSpace:            0
 
