@@ -3,6 +3,7 @@ ruby
 go
 git
 tmux
+urxvt
 x
 xmonad
 xmodmap
