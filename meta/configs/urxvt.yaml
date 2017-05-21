@@ -1,0 +1,5 @@
+- shell:
+    - mkdir -p ~/.urxvt
+
+- link:
+    ~/.urxvt/ext: .urxvt/ext
