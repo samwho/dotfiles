@@ -28,7 +28,7 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           true
-URxvt*font: xft:Hack:pixelsize=22:style=medium
+URxvt*font:                 xft:Hack:pixelsize=22:style=medium
 
 ! Fix font space
 URxvt.letterSpace: -2
@@ -40,9 +40,14 @@ URxvt.scrollBar:            false
 ! Perl extensions
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755:               False
-URxvt.perl-ext-common:        default,matcher,selection-to-clipboard,urxvtcopypaste
+URxvt.perl-ext-common:        default,matcher,selection-to-clipboard,urxvtcopypaste,font-size
 URxvt.matcher.button:         1
 URxvt.urlLauncher:            google-chrome
+
+URxvt.keysym.C-minus:       font-size:smaller
+URxvt.keysym.C-plus:        font-size:bigger
+URxvt.keysym.C-equal:       font-size:reset
+URxvt.keysym.C-question:    font-size:show
 
 ! Cursor
 URxvt.cursorBlink:          true
