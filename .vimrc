@@ -34,6 +34,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'artur-shaik/vim-javacomplete2'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-sensible'
+Plug 'racer-rust/vim-racer'
 
 call plug#end()
 call glaive#Install()
@@ -136,6 +137,8 @@ let g:syntastic_mode_map = { 'mode': 'active',
 let g:syntastic_c_compiler = 'clang'
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '`llvm-config --cppflags --ldflags --libs core`'
+
+let g:racer_experimental_completer = 1
 
 
 " Some time savers.
