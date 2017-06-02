@@ -1,0 +1,147 @@
+#!/usr/bin/env python
+import humanize
+import json
+import psutil
+import sys
+import time
+
+class Module:
+    full_text             = ""
+    short_text            = ""
+    color                 = ""
+    background            = ""
+    border                = ""
+    min_width             = 0
+    align                 = "center"
+    urgent                = False
+    name                  = ""
+    instance              = ""
+    separator             = True
+    separator_block_width = 40
+
+    now = None
+
+    def __init__(self):
+        self.now = time.time()
+
+    def next(self):
+        prev, self.now = self.now, time.time()
+        self.update(self.now - prev)
+
+    def update(self, elapsed):
+        pass
+
+    def to_dict(self):
+        ret = {
+            "full_text": self.full_text,
+            "short_text": self.short_text,
+            "color": self.color,
+            "background": self.background,
+            "border": self.border,
+            "min_width": self.min_width,
+            "align": self.align,
+            "urgent": self.urgent,
+            "name": self.name,
+            "instance": self.instance,
+            "separator": self.separator,
+            "separator_block_width": self.separator_block_width,
+        }
+
+        return { k: v for k, v in ret.items() if v }
+
+
+class CPUModule(Module):
+    def __init__(self):
+        super().__init__()
+
+        # First call to cpu_percent() without arguments always returns 0.0, so
+        # we do it here such that the next value makes sense.
+        psutil.cpu_percent()
+
+    def update(self, elapsed):
+        self.full_text = "cpu {:2.0f}%".format(psutil.cpu_percent())
+
+
+class NetworkModule(Module):
+    def __init__(self):
+        super().__init__()
+        self.cur = psutil.net_io_counters()
+
+    def update(self, elapsed):
+        prev, self.cur = self.cur, psutil.net_io_counters()
+
+        up = humanize.naturalsize(
+            self.cur.bytes_sent - prev.bytes_sent, gnu=True)
+        down = humanize.naturalsize(
+            self.cur.bytes_recv - prev.bytes_recv, gnu=True)
+
+        self.full_text = "net t:{:^6} r:{:^6}".format(up, down)
+
+
+class DiskIOModule(Module):
+    def __init__(self):
+        super().__init__()
+        self.cur = psutil.disk_io_counters()
+
+    def update(self, elapsed):
+        prev, self.cur = self.cur, psutil.disk_io_counters()
+
+        read = humanize.naturalsize(
+            self.cur.read_bytes - prev.read_bytes, gnu=True)
+        write = humanize.naturalsize(
+            self.cur.write_bytes - prev.write_bytes, gnu=True)
+
+        self.full_text = "disk r:{:^6} w:{:^6}".format(read, write)
+
+
+class RAMModule(Module):
+    def update(self, elapsed):
+        self.full_text = "ram used {:2.0f}%".format(psutil.virtual_memory().percent)
+
+
+def print_line(message):
+    """ Non-buffered printing to stdout. """
+    sys.stdout.write(message + '\n')
+    sys.stdout.flush()
+
+def read_line():
+    """ Interrupted respecting reader for stdin. """
+    # try reading a line, removing any extra whitespace
+    try:
+        line = sys.stdin.readline().strip()
+        # i3status sends EOF, or an empty line
+        if not line:
+            sys.exit(3)
+        return line
+    # exit on ctrl-c
+    except KeyboardInterrupt:
+        sys.exit()
+
+
+def main():
+    interval_seconds = 1
+
+    # Skip the first line which contains the version header.
+    print_line('{"version": 1}')
+    # The second line contains the start of the infinite array.
+    print_line("[")
+
+    modules = [
+        CPUModule(),
+        RAMModule(),
+        NetworkModule(),
+        DiskIOModule(),
+    ]
+
+    while True:
+        time.sleep(interval_seconds)
+
+        for module in modules:
+            module.next()
+
+        print_line(json.dumps(list(map(lambda m: m.to_dict(), modules))) + ",")
+
+
+if __name__ == "__main__":
+    main()
+

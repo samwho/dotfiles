@@ -27,8 +27,8 @@ URxvt.internalBorder:       3
 URxvt.lineSpace:            0
 
 ! Fonts
-URxvt.allow_bold:           false
-URxvt*font: xft:Roboto Mono:pixelsize=16:style=medium
+URxvt.allow_bold:           true
+URxvt*font:                 xft:Hack:pixelsize=22:style=medium
 
 ! Fix font space
 URxvt.letterSpace: -1
@@ -38,9 +38,16 @@ URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
 ! Perl extensions
-URxvt.perl-ext-common:      default,matcher,selection-to-clipboard
-URxvt.matcher.button:       1
-URxvt.urlLauncher:          firefox
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755:               False
+URxvt.perl-ext-common:        default,matcher,selection-to-clipboard,urxvtcopypaste,font-size
+URxvt.matcher.button:         1
+URxvt.urlLauncher:            google-chrome
+
+URxvt.keysym.C-minus:       font-size:decglobal
+URxvt.keysym.C-plus:        font-size:incglobal
+URxvt.keysym.C-equal:       font-size:reset
+URxvt.keysym.C-question:    font-size:show
 
 ! Cursor
 URxvt.cursorBlink:          true
