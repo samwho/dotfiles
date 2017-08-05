@@ -122,18 +122,10 @@ if v:version >= 700
     autocmd! BufNewFile,BufRead *.txt,*.md,*.markdown,*.mdown,*.tex setlocal spell spelllang=en_gb
 endif
 
-" Syntastic settings.
-set statusline+=\ %#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump=1
-let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'passive_filetypes': ['tex', 'java'] }
-let g:syntastic_c_compiler = 'clang'
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '`llvm-config --cppflags --ldflags --libs core`'
+" Ale settings
+let g:airline#extensions#ale#enabled = 1
 
+" Racer settings
 let g:racer_experimental_completer = 1
 
 
