@@ -3,7 +3,7 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
