@@ -46,6 +46,8 @@ syntax enable
 
 set background=dark
 colorscheme solarized
+" To get transparency
+highlight Normal ctermbg=NONE
 
 " Load plugins.
 if has("autocmd")
