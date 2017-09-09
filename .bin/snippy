@@ -1,0 +1,19 @@
+#!/bin/bash
+DIR="$HOME/.snippy"
+FILE="$DIR/$(find $DIR/ -type f | xargs -L1 basename | rofi -dmenu -p "snippet:")"
+
+# If the file is executable, run it and use its stdout as the snippet. If it
+# isn't executable, use the file content as the snippet.
+#
+# The reason we do the weird thing with printf is to strip trailing newline
+# characters.
+if [[ -x $FILE ]]
+then
+  CONTENT=$(printf %s "$($FILE)")
+else
+  CONTENT=$(printf %s "$(cat -- $FILE)")
+fi
+
+echo -n "$CONTENT" | xclip -sel primary
+echo -n "$CONTENT" | xclip -sel secondary
+echo -n "$CONTENT" | xclip -sel clipboard

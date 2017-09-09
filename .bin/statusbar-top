@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+from i3pystatus import Status
+
+status = Status()
+
+status.register("clock", format=("NYC %F %H:%M", "EST"))
+status.register("clock", format=("MTV %F %H:%M", "America/Tijuana"))
+status.register("clock", format=("LOCAL %F %H:%M", "Europe/London"))
+
+status.run()

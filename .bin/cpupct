@@ -1,7 +1,0 @@
-#!/usr/bin/env python
-import humanize
-import psutil
-import time
-
-interval = 2
-print("{}%".format(psutil.cpu_percent(interval=interval)))

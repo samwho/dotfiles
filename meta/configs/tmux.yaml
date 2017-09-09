@@ -1,7 +1,7 @@
 - shell:
     - mkdir -p ~/.tmux/plugins
-    - python -m ensurepip --user
-    - python -m pip install --user psutil humanize
+    # - python -m ensurepip --user
+    # - python -m pip install --user psutil humanize
 
 - link:
     ~/.tmux.conf: .tmux.conf

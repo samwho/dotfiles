@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+from i3pystatus import Status
+
+BASE = "#eee8d5"
+GREEN = "#859900"
+YELLOW = "#b58900"
+RED = "#dc322f"
+
+def separator(text):
+  status.register("text",
+                  text="<b>" + text + "</b>",
+                  color=BASE,
+                  hints={"markup":"pango"})
+
+
+status = Status()
+
+status.register("ping",
+                color=GREEN)
+separator("ping")
+status.register("network",
+                format_up="{interface} {network_graph} {kbs:>10}kb/s",
+                start_color=GREEN,
+                end_color=RED)
+separator("net")
+status.register("cpu_usage_graph",
+                format="{cpu_graph} {usage:>3}%",
+                start_color=GREEN,
+                end_color=RED)
+status.register("temp",
+                color=GREEN,
+                alert_color=RED)
+status.register("cpu_freq",
+                format="{avgg}GHz",
+                color=GREEN)
+separator("cpu")
+status.register("mem",
+                format="{percent_used_mem:>4}%",
+                color=GREEN,
+                warn_color=YELLOW,
+                alert_color=RED)
+status.register("mem_bar",
+                format="{used_mem_bar}",
+                color=GREEN,
+                warn_color=YELLOW,
+                alert_color=RED)
+separator("ram")
+status.register("uptime",
+                format="{days}d {hours}h {mins}m {secs}s",
+                color=GREEN)
+separator("uptime")
+# status.register("disk", path="/", format="root {percentage_used:>4}%")
+# status.register("disk", path="/tmp", format="tmp {percentage_used}%")
+# status.register("disk", path="/usr/local/google/home/samwho", format="home {percentage_used}%")
+# status.register("load", format="load {avg1:>4} {avg5:>4} {avg15:>4} {tasks:>4}")
+status.register("pulseaudio")
+
+
+status.run()
