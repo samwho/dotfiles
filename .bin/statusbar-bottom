@@ -27,9 +27,6 @@ status.register("cpu_usage_graph",
                 format="{cpu_graph} {usage:>3}%",
                 start_color=GREEN,
                 end_color=RED)
-status.register("temp",
-                color=GREEN,
-                alert_color=RED)
 status.register("cpu_freq",
                 format="{avgg}GHz",
                 color=GREEN)
