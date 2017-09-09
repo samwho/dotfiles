@@ -26,13 +26,16 @@ new_float pixel 1
 hide_edge_borders smart
 
 # lock screen
-bindsym Mod1+Control+l exec "i3lock -c 000000"
+bindsym $mod+Control+l exec "i3lock -c 000000"
 
 # start a terminal
 bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+# Screenshot
+bindsym $mod+Shift+Control+s exec "scrot"
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
