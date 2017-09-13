@@ -1,6 +1,5 @@
 - link:
     ~/.xmonad: .xmonad
-    ~/.xinitrc: .xinitrc
     ~/.bashrc.d/xmonad.bash: .bashrc.d/xmonad.bash
 
 - shell:

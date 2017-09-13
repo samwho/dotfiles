@@ -1,0 +1,24 @@
+Config { font = "xft:roboto mono:size=12:antialias=true"
+       , bgColor = "#002b36"
+       , fgColor = "#657b83"
+       , border = NoBorder
+       , borderColor = "black"
+       , hideOnStart = False
+       , persistent = True
+       , position = TopW L 100
+       , lowerOnStart = True
+       , commands = [ Run Network "em1" ["-L","5","-H","1000","--normal","green","--high","red"] 10
+                    , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
+                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+                    , Run Swap [ ] 10
+                    , Run Uptime [ ] 10
+                    , Run DiskIO [("sda", "sda[r/<read> w/<write>]"), ("sdb", "sdb[r/<read> w/<write>]")] [] 10
+                    , Run Com "londate" [ ] "LONdate" 1
+                    , Run Com "mtvdate" [ ] "MTVdate" 1
+                    , Run Com "nydate" [ ] "NYdate" 1
+                    , Run ThermalZone 0 ["-t", "Temp:<temp>C"] 30
+                   ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%cpu% | %memory% * %swap% | %em1% | %diskio% | %uptime% | %thermal0% }{ <fc=#859900>LON(%LONdate%)</fc> | <fc=#b58900>MTV/SF(%MTVdate%)</fc> | <fc=#FFD700>New York(%NYdate%)</fc>"
+}

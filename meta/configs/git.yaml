@@ -1,3 +1,4 @@
 - link:
     ~/.gitconfig: .gitconfig
     ~/.gitignore_global: .gitignore_global
+    ~/.bashrc.d/aliases.d/git.bash: .bashrc.d/aliases.d/git.bash

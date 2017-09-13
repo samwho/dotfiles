@@ -1,1 +1,0 @@
-alias blaze="bazel"

@@ -3,17 +3,14 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
-Plug 'oscarh/vimerl'
-Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
 Plug 'altercation/vim-colors-solarized'
-Plug 'rodjek/vim-puppet'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 Plug 'fatih/vim-go'
@@ -21,7 +18,6 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'google/vim-ft-bzl'
-Plug 'rust-lang/rust.vim'
 Plug 'fugue/ludwig-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'ervandew/supertab'
@@ -29,12 +25,12 @@ Plug 'yggdroot/indentline'
 Plug 'roxma/vim-paste-easy'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
-Plug 'ekalinin/Dockerfile.vim'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'artur-shaik/vim-javacomplete2'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-sensible'
 Plug 'racer-rust/vim-racer'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 call glaive#Install()
@@ -50,6 +46,8 @@ syntax enable
 
 set background=dark
 colorscheme solarized
+" To get transparency
+highlight Normal ctermbg=NONE
 
 " Load plugins.
 if has("autocmd")
@@ -126,18 +124,10 @@ if v:version >= 700
     autocmd! BufNewFile,BufRead *.txt,*.md,*.markdown,*.mdown,*.tex setlocal spell spelllang=en_gb
 endif
 
-" Syntastic settings.
-set statusline+=\ %#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump=1
-let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'passive_filetypes': ['tex', 'java'] }
-let g:syntastic_c_compiler = 'clang'
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '`llvm-config --cppflags --ldflags --libs core`'
+" Ale settings
+let g:airline#extensions#ale#enabled = 1
 
+" Racer settings
 let g:racer_experimental_completer = 1
 
 
