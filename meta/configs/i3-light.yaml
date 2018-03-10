@@ -1,0 +1,7 @@
+- shell:
+    - mkdir -p ~/.i3
+
+- link:
+    ~/.i3/config: .i3/config-light
+    ~/.i3status.top.conf: .i3status.top.conf
+    ~/.chrome-remote-desktop-session: .chrome-remote-desktop-session
