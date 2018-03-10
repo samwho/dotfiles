@@ -167,11 +167,11 @@ bar {
 
   colors {
     background $S_base3
-    statusline $S_base00
-    focused_workspace $S_base2 $S_base2 $S_base01
-    active_workspace $S_base2 $S_base2 $S_base01
-    inactive_workspace $S_base3 $S_base3 $S_base00
-    urgent_workspace $S_red $S_red $S_base3
+    statusline $S_base02
+    focused_workspace   $S_base2 $S_base2 $S_base01
+    active_workspace    $S_base2 $S_base2 $S_base01
+    inactive_workspace  $S_base3 $S_base3 $S_base00
+    urgent_workspace    $S_red $S_red $S_base3
   }
 }
 
@@ -183,10 +183,11 @@ bar {
 
   colors {
     background $S_base3
-    statusline $S_base02
+    statusline $S_base01
   }
 }
 
-client.focused $S_base2 $S_base2 $S_base00
-client.focused_inactive $S_base2 $S_base2 $S_base00
-client.unfocused $S_base3 $S_base3 $S_base3
+#                       border    backgr    text      indicator  child border
+client.focused          $S_base3  $S_base3  $S_base3  $S_base3   $S_base0
+client.focused_inactive $S_base3  $S_base3  $S_base3  $S_base3   $S_base3
+client.unfocused        $S_base3  $S_base3  $S_base3  $S_base3   $S_base3
