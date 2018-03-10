@@ -3,6 +3,7 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'ElmCast/elm-vim'
 Plug 'w0rp/ale'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-commentary'
@@ -95,6 +96,9 @@ function SaveAndCloseSession()
 endfunction
 
 autocmd! VimLeave * call SaveAndCloseSession()
+
+" We have vim-elm installed, so we need to ask polyglot to kindly not.
+let g:polyglot_disabled = ['elm']
 
 " Map my leader key
 let mapleader=','
