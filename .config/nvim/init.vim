@@ -12,3 +12,7 @@ colorscheme NeoSolarized
 set number " show line numbers
 
 let g:airline_symbols_ascii = 1
+
+" Maps for natural navigation of long lines
+nnoremap j gj
+nnoremap k gk
