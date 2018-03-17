@@ -1,14 +1,13 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'ervandew/supertab'
 Plug 'iCyMind/NeoSolarized'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
-Plug 'junegunn/fzf'
-Plug 'roxma/nvim-completion-manager'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'sebastianmarkow/deoplete-rust'
 
 call plug#end()
 
@@ -30,6 +29,7 @@ let mapleader=','
 " Make ,e open a file in the directory of the file currently being edited.
 nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
 
-let g:LanguageClient_serverCommands = {
-    	\ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-	\ }
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#rust#racer_binary='/home/sam/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='/home/sam/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/'
