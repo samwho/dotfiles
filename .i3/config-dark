@@ -9,7 +9,10 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-exec compton -CGb --inactive-dim 0.05
+# The glx backend does weird things when used in a VM, so we
+# set this to use the xrender backend which doesn't seem
+# to exhibit any problems.
+exec compton -CGb --backend xrender --inactive-dim 0.05
 
 set $mod Mod1
 
@@ -29,7 +32,7 @@ hide_edge_borders smart
 bindsym $mod+Control+l exec "i3lock -c 000000"
 
 # start a terminal
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
