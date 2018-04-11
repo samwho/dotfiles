@@ -29,6 +29,9 @@ URxvt.lineSpace:            0
 ! Fonts
 URxvt.allow_bold:           true
 URxvt*font:                 xft:Hack:pixelsize=26:style=medium
+xterm*font:                 xft:Hack:pixelsize=26:style=medium
+
+xterm*BorderWidth: 0
 
 ! Fix font space
 URxvt.letterSpace: -1.5
@@ -116,3 +119,4 @@ URxvt.pointerBlank:         true
 !! white dark/light
 *color7:                S_base2
 *color15:               S_base3
+
