@@ -1,5 +1,6 @@
 - shell:
   - mkdir -p ~/.config/fish
+  - rm -rf ~/.config/fish/*
 
 - link:
     ~/.config/fish/fishd.archlinux: .config/fish/fishd.archlinux

@@ -1,0 +1,5 @@
+- shell:
+  - mkdir -p ~/.config/alacritty
+
+- link:
+    ~/.config/alacritty/alacritty.yml: .config/alacritty/alacritty.yml
