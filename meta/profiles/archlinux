@@ -6,6 +6,7 @@ i3-light
 java
 ruby
 rust
+ssh-agent
 tmux
 urxvt
 nvim
