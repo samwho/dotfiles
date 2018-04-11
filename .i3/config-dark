@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-exec compton -CGb
+exec compton -CGb --inactive-dim 0.05
 
 set $mod Mod1
 
@@ -29,7 +29,7 @@ hide_edge_borders smart
 bindsym $mod+Control+l exec "i3lock -c 000000"
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill

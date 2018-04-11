@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-exec compton -CGb
+exec compton -CGb --inactive-dim 0.05
 
 set $mod Mod1
 
