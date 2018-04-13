@@ -26,18 +26,6 @@ let mapleader=','
 " Visual dot map
 :vnoremap . :norm.<CR>
 
-"let g:deoplete#disable_auto_complete = 1
-"inoremap <silent><expr> <TAB>
-"    \ pumvisible() ? "\<C-n>" :
-"    \ <SID>check_back_space() ? "\<TAB>" :
-"    \ deoplete#mappings#manual_complete()
-"function! s:check_back_space() abort "{{{
-"    let col = col('.') - 1
-"    return !col || getline('.')[col - 1]  =~ '\s'
-"endfunction"}}}
-
-let g:SuperTabDefaultCompletionType = "<C-n>"
-
 " Make ,e open a file in the directory of the file currently being edited.
 nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
 
