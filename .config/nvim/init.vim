@@ -26,10 +26,23 @@ let mapleader=','
 " Visual dot map
 :vnoremap . :norm.<CR>
 
+"let g:deoplete#disable_auto_complete = 1
+"inoremap <silent><expr> <TAB>
+"    \ pumvisible() ? "\<C-n>" :
+"    \ <SID>check_back_space() ? "\<TAB>" :
+"    \ deoplete#mappings#manual_complete()
+"function! s:check_back_space() abort "{{{
+"    let col = col('.') - 1
+"    return !col || getline('.')[col - 1]  =~ '\s'
+"endfunction"}}}
+
+let g:SuperTabDefaultCompletionType = "<C-n>"
+
 " Make ,e open a file in the directory of the file currently being edited.
 nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#rust#racer_binary='/home/sam/.cargo/bin/racer'
-let g:deoplete#sources#rust#rust_source_path='/home/sam/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/'
+let g:deoplete#sources#rust#racer_binary=systemlist("which racer")[0]
+let g:deoplete#sources#rust#rust_source_path=systemlist("rustc --print sysroot")[0] . '/lib/rustlib/src/rust/src/'
+let g:deoplete#sources#rust#show_duplicates=0
