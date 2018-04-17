@@ -1,9 +1,7 @@
 - shell:
   - mkdir -p ~/.bashrc.d/aliases.d
-  - mkdir -p ~/.config/fish/includes
 
 - link:
     ~/.gitconfig: .gitconfig
     ~/.gitignore_global: .gitignore_global
     ~/.bashrc.d/aliases.d/git.bash: .bashrc.d/aliases.d/git.bash
-    ~/.config/fish/includes/git.fish: .config/fish/includes/git.fish
