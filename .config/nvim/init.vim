@@ -31,5 +31,6 @@ nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#rust#racer_binary='/home/sam/.cargo/bin/racer'
-let g:deoplete#sources#rust#rust_source_path='/home/sam/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/'
+let g:deoplete#sources#rust#racer_binary=systemlist("which racer")[0]
+let g:deoplete#sources#rust#rust_source_path=systemlist("rustc --print sysroot")[0] . '/lib/rustlib/src/rust/src/'
+let g:deoplete#sources#rust#show_duplicates=0
