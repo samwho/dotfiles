@@ -9,7 +9,6 @@ java
 ruby
 rust
 ssh-agent
-tmux
 urxvt
 nvim
 x-light

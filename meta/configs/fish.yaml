@@ -1,5 +1,5 @@
 - shell:
-  - mkdir -p ~/.config/fish
+  - mkdir -p ~/.config/fish/includes
   - rm -rf ~/.config/fish/*
 
 - link:
