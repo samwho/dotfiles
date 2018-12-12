@@ -6,15 +6,15 @@ window:
     x: 3
     y: 3
 
-  decorations: false
+  decorations: none
 
 font:
   normal:
-    family: 'Hack'
+    family: 'DankMono'
   bold:
-    family: 'Hack'
+    family: 'DankMono'
   italic:
-    family: 'Hack'
+    family: 'DankMono'
 
   size: 24.0
 
@@ -23,34 +23,36 @@ visual_bell:
 
 tabspaces: 4
 
-# Colors (Solarized Light)
+# Colors (Gruvbox light)
 colors:
   # Default colors
   primary:
-    background: '0xfdf6e3'
-    foreground: '0x586e75'
+    # background: '0xf9f5d7' # hard
+    background: '0xfbf1c7' # medium
+    # background: '0xf2e5bc' # soft
+    foreground: '0x3c3836'
 
   # Normal colors
   normal:
-    black:   '0x073642'
-    red:     '0xdc322f'
-    green:   '0x859900'
-    yellow:  '0xb58900'
-    blue:    '0x268bd2'
-    magenta: '0xd33682'
-    cyan:    '0x2aa198'
-    white:   '0xeee8d5'
+    black:   '0xfbf1c7'
+    red:     '0xcc241d'
+    green:   '0x98971a'
+    yellow:  '0xd79921'
+    blue:    '0x458588'
+    magenta: '0xb16286'
+    cyan:    '0x689d6a'
+    white:   '0x7c6f64'
 
   # Bright colors
   bright:
-    black:   '0x002b36'
-    red:     '0xcb4b16'
-    green:   '0x586e75'
-    yellow:  '0x657b83'
-    blue:    '0x839496'
-    magenta: '0x6c71c4'
-    cyan:    '0x93a1a1'
-    white:   '0xfdf6e3'
+    black:   '0x928374'
+    red:     '0x9d0006'
+    green:   '0x79740e'
+    yellow:  '0xb57614'
+    blue:    '0x076678'
+    magenta: '0x8f3f71'
+    cyan:    '0x427b58'
+    white:   '0x3c3836'
 
 key_bindings:
   - { key: V,        mods: Control|Shift,    action: Paste               }

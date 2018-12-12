@@ -1,0 +1,9 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- link:
+    ~/.xinitrc: .xinitrc
+    ~/.xsession: .xinitrc
+    ~/.Xdefaults: .Xdefaults-gruvbox

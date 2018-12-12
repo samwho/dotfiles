@@ -28,8 +28,8 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           true
-URxvt*font:                 xft:Hack:pixelsize=26:style=medium
-xterm*font:                 xft:Hack:pixelsize=26:style=medium
+URxvt*font:                 xft:DankMono:pixelsize=26:style=medium
+xterm*font:                 xft:DankMono:pixelsize=26:style=medium
 
 xterm*BorderWidth: 0
 

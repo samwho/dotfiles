@@ -1,0 +1,5 @@
+- shell:
+  - mkdir -p ~/.config/rofi
+
+- link:
+    ~/.config/rofi/config: .config/rofi/config

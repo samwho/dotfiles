@@ -1,5 +1,10 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
 - shell:
-    - mkdir -p ~/.i3
+    - mkdir -p ~/.config/i3
 
 - link:
-    ~/.i3/config: .i3/config-light
+    ~/.config/i3/config: .config/i3/config-light

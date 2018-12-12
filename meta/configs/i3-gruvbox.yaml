@@ -7,4 +7,4 @@
     - mkdir -p ~/.config/i3
 
 - link:
-    ~/.config/i3/config: .config/i3/config-dark
+    ~/.config/i3/config: .config/i3/config-gruvbox

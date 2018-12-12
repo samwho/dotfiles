@@ -4,12 +4,13 @@ fish
 fzf
 go
 git
-i3-light
+i3-gruvbox
 java
+rofi
 ruby
 rust
 ssh-agent
 urxvt
 nvim
-x-light
+x-gruvbox
 xmodmap

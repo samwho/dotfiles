@@ -1,6 +1,7 @@
 - shell:
   - rm -rf ~/.config/fish
   - mkdir -p ~/.config/fish
+  - curl -Lo .config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 
 - link:
     ~/.config/fish/functions: .config/fish/functions

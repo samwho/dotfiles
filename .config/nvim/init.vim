@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'ervandew/supertab'
+Plug 'morhetz/gruvbox'
 Plug 'iCyMind/NeoSolarized'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-sensible'
@@ -11,9 +12,12 @@ Plug 'sebastianmarkow/deoplete-rust'
 
 call plug#end()
 
-colorscheme NeoSolarized
+set background=dark
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
 
 set number " show line numbers
+set termguicolors
 
 let g:airline_symbols_ascii = 1
 
