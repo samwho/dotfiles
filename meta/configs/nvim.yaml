@@ -4,7 +4,6 @@
 
 - link:
     ~/.config/nvim/init.vim: .config/nvim/init.vim
-    ~/.bashrc.d/aliases.d/nvim.bash: .bashrc.d/aliases.d/nvim.bash
 
 
 - shell:

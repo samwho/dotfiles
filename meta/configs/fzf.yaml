@@ -1,6 +1,5 @@
 - link:
     ~/.fzf: fzf
-    ~/.bashrc.d/fzf.bash: .bashrc.d/fzf.bash
 
 - shell:
     - ~/.fzf/install --key-bindings --completion --no-update-rc

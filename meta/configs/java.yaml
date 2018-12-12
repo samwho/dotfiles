@@ -1,7 +1,0 @@
-- defaults:
-    link:
-      create: true
-      relink: true
-
-- link:
-    ~/.bashrc.d/java.bash: .bashrc.d/java.bash

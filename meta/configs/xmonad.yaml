@@ -1,6 +1,5 @@
 - link:
     ~/.xmonad: .xmonad
-    ~/.bashrc.d/xmonad.bash: .bashrc.d/xmonad.bash
 
 - shell:
     - xmonad --recompile
