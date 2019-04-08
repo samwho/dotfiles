@@ -1,0 +1,6 @@
+- shell:
+  - mkdir -p ~/.config/polybar
+
+- link:
+    ~/.config/polybar/launch.sh: .config/polybar/launch.sh
+    ~/.config/polybar/config: .config/polybar/config

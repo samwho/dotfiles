@@ -6,4 +6,4 @@
 - link:
     ~/.xinitrc: .xinitrc
     ~/.xsession: .xinitrc
-    ~/.Xdefaults: .Xdefaults-gruvbox
+    ~/.Xdefaults: .Xdefaults

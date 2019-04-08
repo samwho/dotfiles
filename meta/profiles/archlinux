@@ -3,9 +3,10 @@ feh
 fish
 fzf
 git
-i3-gruvbox
+i3
+polybar
 rofi
 ruby
 urxvt
-x-gruvbox
+x
 xmodmap

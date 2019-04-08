@@ -1,0 +1,107 @@
+[bar/top]
+modules-left = i3
+modules-center = cpu memory network filesystem
+modules-right = date
+fixed-center = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+font-0 = "Fira Code:size=16;0"
+font-1 = "MaterialIcons:size=16;1"
+height = 50
+padding-left = 1
+padding-right = 1
+module-margin = 1
+
+[module/cpu]
+type = internal/cpu
+
+label = %{T1} %percentage:2%%
+
+; Available tags:
+;   <label> (default)
+;   <bar-load>
+;   <ramp-load>
+;   <ramp-coreload>
+format = <label> <bar-load>
+
+bar-load-width = 10
+bar-load-foreground-0 = ${colors.blu}
+bar-load-foreground-1 = ${colors.grn}
+bar-load-foreground-2 = ${colors.ylw}
+bar-load-foreground-3 = ${colors.red}
+bar-load-indicator = 
+bar-load-indicator-foreground = ${colors.wht}
+bar-load-fill = ■
+bar-load-empty = □
+bar-load-empty-foreground = ${colors.blk}
+
+[module/memory]
+type = internal/memory
+interval = 3
+format = <label> <bar-used>
+
+label =  %percentage_used:2%%
+
+bar-used-width = 10
+bar-used-foreground-0 = ${colors.blu}
+bar-used-foreground-1 = ${colors.grn}
+bar-used-foreground-2 = ${colors.ylw}
+bar-used-foreground-3 = ${colors.red}
+bar-used-indicator = 
+bar-used-indicator-foreground = ${colors.wht}
+bar-used-fill = ■
+bar-used-empty = □
+bar-used-empty-foreground = ${colors.blk}
+
+[module/network]
+type = internal/network
+interface = enp0s3
+accumulate-stats = true
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected =  %downspeed:7%  %upspeed:7%
+label-disconnected =  not connected
+
+[module/i3]
+type = internal/i3
+
+format = i3:<label-state> <label-mode>
+
+label-focused-foreground = ${colors.blu}
+label-urgent-foreground = ${colors.red}
+
+[module/filesystem]
+type = internal/fs
+
+mount-0 = /
+label-mounted =  %percentage_used:2%%
+
+[module/date]
+type = internal/date
+date = %Y-%m-%d%
+time = %H:%M
+
+format = <label>
+label =  %date%  %time%
+
+[colors]
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+blk = ${xrdb:color0}
+red = ${xrdb:color1}
+grn = ${xrdb:color2}
+ylw = ${xrdb:color3}
+blu = ${xrdb:color4}
+mag = ${xrdb:color5}
+cyn = ${xrdb:color6}
+wht = ${xrdb:color7}
+bblk = ${xrdb:color8}
+bred = ${xrdb:color9}
+bgrn = ${xrdb:color10}
+bylw = ${xrdb:color11}
+bblu = ${xrdb:color12}
+bmag = ${xrdb:color13}
+bcyn = ${xrdb:color14}
+bwht = ${xrdb:color15}
